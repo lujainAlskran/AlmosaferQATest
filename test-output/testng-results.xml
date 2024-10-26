@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-23T15:28:25 EET" name="Default suite" finished-at="2024-10-23T15:28:27 EET" duration-ms="2409">
+  <suite started-at="2024-10-26T13:26:27 EET" name="Default suite" finished-at="2024-10-26T13:26:30 EET" duration-ms="2361">
     <groups>
     </groups>
-    <test started-at="2024-10-23T15:28:25 EET" name="Default test" finished-at="2024-10-23T15:28:27 EET" duration-ms="2409">
+    <test started-at="2024-10-26T13:26:27 EET" name="Default test" finished-at="2024-10-26T13:26:30 EET" duration-ms="2361">
       <class name="MyTestCases">
-        <test-method is-config="true" signature="mySetup()[pri:0, instance:MyTestCases@1b765a2c]" started-at="2024-10-23T15:28:25 EET" name="mySetup" finished-at="2024-10-23T15:28:27 EET" duration-ms="2281" status="PASS">
+        <test-method is-config="true" signature="mySetup()[pri:0, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:27 EET" name="mySetup" finished-at="2024-10-26T13:26:29 EET" duration-ms="2139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetup -->
-        <test-method signature="CheckEngLanguageIsDefault()[pri:1, instance:MyTestCases@1b765a2c]" started-at="2024-10-23T15:28:27 EET" name="CheckEngLanguageIsDefault" finished-at="2024-10-23T15:28:27 EET" duration-ms="42" status="PASS">
+        <test-method signature="CheckEngLanguageIsDefault()[pri:1, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:29 EET" name="CheckEngLanguageIsDefault" finished-at="2024-10-26T13:26:30 EET" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckEngLanguageIsDefault -->
-        <test-method signature="CheckSARCurrencyIsDefault()[pri:2, instance:MyTestCases@1b765a2c]" started-at="2024-10-23T15:28:27 EET" name="CheckSARCurrencyIsDefault" finished-at="2024-10-23T15:28:27 EET" duration-ms="25" status="PASS">
+        <test-method signature="CheckSARCurrencyIsDefault()[pri:2, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckSARCurrencyIsDefault" finished-at="2024-10-26T13:26:30 EET" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckSARCurrencyIsDefault -->
-        <test-method signature="CheckContactNumberIsCorrect()[pri:3, instance:MyTestCases@1b765a2c]" started-at="2024-10-23T15:28:27 EET" name="CheckContactNumberIsCorrect" finished-at="2024-10-23T15:28:27 EET" duration-ms="18" status="PASS">
+        <test-method signature="CheckContactNumberIsCorrect()[pri:3, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckContactNumberIsCorrect" finished-at="2024-10-26T13:26:30 EET" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckContactNumberIsCorrect -->
-        <test-method signature="CheckQitafLogo()[pri:4, instance:MyTestCases@1b765a2c]" started-at="2024-10-23T15:28:27 EET" name="CheckQitafLogo" finished-at="2024-10-23T15:28:27 EET" duration-ms="18" status="PASS">
+        <test-method signature="CheckQitafLogo()[pri:4, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckQitafLogo" finished-at="2024-10-26T13:26:30 EET" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckQitafLogo -->
+        <test-method signature="CheckHotelsNotSelected()[pri:5, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckHotelsNotSelected" finished-at="2024-10-26T13:26:30 EET" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckHotelsNotSelected -->
+        <test-method signature="CheckFlightDepartureDate()[pri:6, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckFlightDepartureDate" finished-at="2024-10-26T13:26:30 EET" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckFlightDepartureDate -->
+        <test-method signature="CheckFlightReturnDate()[pri:7, instance:MyTestCases@2807bdeb]" started-at="2024-10-26T13:26:30 EET" name="CheckFlightReturnDate" finished-at="2024-10-26T13:26:30 EET" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckFlightReturnDate -->
       </class> <!-- MyTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

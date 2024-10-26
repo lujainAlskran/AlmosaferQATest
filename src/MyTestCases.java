@@ -1,3 +1,8 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,6 +58,61 @@ public class MyTestCases {
 		boolean actuallogo = driver.findElement(By.cssSelector(".sc-bdVaJa.bxRSiR.sc-ciodno.lkfeIG")).isDisplayed();
 		boolean expectedlogo = true;
 		Assert.assertEquals(actuallogo, expectedlogo);
+	}
+	@Test(priority = 5)
+	public void CheckHotelsNotSelected()
+	{
+		WebElement hotelAtt = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		String actualSelection = hotelAtt.getAttribute("aria-selected");
+		String expectedSelection = "false";
+		Assert.assertEquals(actualSelection, expectedSelection);
+
+	}
+	@Test(priority = 6 )
+	public void CheckFlightDepartureDate() throws ParseException
+	{
+		LocalDate today = LocalDate.now().plusDays(1);
+		//System.out.println(today);
+		 
+		//String expectedDate = today.toString();
+		
+		int day = today.getDayOfMonth();//27
+		String expectedDay = Integer.toString(day);
+		
+		
+		String actualDay = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-lnrBVv gKbptE'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		Assert.assertEquals(actualDay, expectedDay);
+		
+//		String month = today.getMonth().toString() ;//10
+//		
+		 // sunday
+//		String deptMonth = driver.findElement(By.cssSelector(".sc-hvvHee.cuAEQj")).getText(); // October
+//		String dayNum = driver.findElement(By.cssSelector(".sc-eSePXt.ljMnJa")).getText(); // 27
+		
+//		String dd =  dayNum +"-"+deptMonth+"-"+deptDay; //27-October-Sunday
+//		
+//		String pattern = "E d MMMM";
+//		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+//		String date = simpleDateFormat.format(today);
+//		System.out.println(date);
+	}
+	
+	@Test(priority = 7)
+	public void CheckFlightReturnDate()
+	{
+
+		LocalDate today = LocalDate.now().plusDays(2);
+		System.out.println(today);
+		 
+		//String expectedDate = today.toString();
+		
+		int day = today.getDayOfMonth();
+		String expectedDay = Integer.toString(day);
+		
+		
+		String actualDay = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		Assert.assertEquals(actualDay, expectedDay);
+		
 	}
 	
 	
