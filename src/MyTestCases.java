@@ -2,6 +2,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,10 @@ public class MyTestCases {
 
 	WebDriver driver = new ChromeDriver();
 	String websiteURL = "https://www.almosafer.com/en";
+	
+	Random rand = new Random();
+	
+	
 	@BeforeTest
 	public void mySetup()
 	{
@@ -113,6 +118,27 @@ public class MyTestCases {
 		String actualDay = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']")).getText();
 		Assert.assertEquals(actualDay, expectedDay);
 		
+	}
+	
+	@Test(priority = 8)
+	public void CheckLanguage()
+	{
+		String[] langWebsite = {"https://www.almosafer.com/en","https://www.almosafer.com/ar"};
+		int randomWebsite = rand.nextInt(langWebsite.length);
+		driver.get(langWebsite[randomWebsite]);
+		
+		if (driver.getCurrentUrl().equals("\"https://www.almosafer.com/en\""))
+		{
+			String actualLang = driver.findElement(By.tagName("html")).getAttribute("lang");
+			String expectedLang = "en";
+			Assert.assertEquals(actualLang, expectedLang);
+		}
+		else
+		{
+			String actualLang = driver.findElement(By.tagName("html")).getAttribute("lang");
+			String expectedLang = "ar";
+			Assert.assertEquals(actualLang, expectedLang);
+		}
 	}
 	
 	
